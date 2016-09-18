@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="../assets/script.js?t=2bcc4b59"></script>
+    <title>Usage in monorepos</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-recipesusage-in-monorepos">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="usage-in-monorepos">Usage in monorepos</h1>
+<p><code>pnpm</code>&apos;s ability to use a <a href="shared-store.html">shared store</a> makes it a perfect choice
+for monorepo projects. But there are even more benefits you&#x2019;ll get!</p>
+<p>When you work in a monorepo, you need all your dependencies linked together via <code>npm link</code>.
+However, you also need them to be required by each other in their <code>package.json</code>.</p>
+<p>This is really inconvenient for a few reasons:</p>
+<ol>
+<li>having the dependencies required as semver dependencies, will download them from the registry
+during installation.</li>
+<li><code>npm link</code> prevents downloading from the registry. However, all the dependencies has to
+be manually linked between each other.</li>
+</ol>
+<p><code>pnpm</code> solves these issues with a special option called <code>link-local</code>. When the <code>link-local</code>
+config value is set to <code>true</code>, <code>pnpm</code> will do to changes in it&#x2019;s usual behavior:</p>
+<ol>
+<li>local dependencies will be resolved with symlinks instead of copy/pasting</li>
+<li>before publish, the local dependencies will be converted into semver dependencies</li>
+</ol>
+<p>Here is an <a href="https://github.com/rstacruz/pnpm/examples/monorepo">example monorepo</a> to see how it works.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../recipes/shared-store.html"><span class="title">Shared store</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="../index.html" class="link title  link-index">pnpm</a>
+            </li>
+            <li class="menu-item -level-1"><a href="../api.html" class="link title  link-api">API</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../store-layout.html" class="link title  link-store-layout">Store layout</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../global-install.html" class="link title  link-global-install">Global install</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../roadmap.html" class="link title  link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../store-json.html" class="link title  link-store-json">store.json</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Recipes</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../recipes/shared-store.html" class="link title  link-recipesshared-store">Shared store</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../recipes/usage-in-monorepos.html" class="link title -active link-recipesusage-in-monorepos">Usage in monorepos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
