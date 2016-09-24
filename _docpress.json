@@ -8,9 +8,24 @@
         "slug": "index",
         "headings": [
           {
+            "title": "Table of Contents",
+            "depth": 2,
+            "id": "table-of-contents"
+          },
+          {
+            "title": "Background",
+            "depth": 2,
+            "id": "background"
+          },
+          {
             "title": "Install",
             "depth": 2,
             "id": "install"
+          },
+          {
+            "title": "Usage",
+            "depth": 2,
+            "id": "usage"
           },
           {
             "title": "Custom registries",
@@ -28,19 +43,14 @@
             "id": "benchmark"
           },
           {
-            "title": "Design",
-            "depth": 2,
-            "id": "design"
-          },
-          {
             "title": "Prior art",
             "depth": 2,
             "id": "prior-art"
           },
           {
-            "title": "Thanks",
+            "title": "License",
             "depth": 2,
-            "id": "thanks"
+            "id": "license"
           }
         ]
       },
@@ -206,6 +216,53 @@
             "slug": "recipesusage-in-monorepos"
           }
         ]
+      },
+      {
+        "title": "Contributing",
+        "source": "CONTRIBUTING.md",
+        "url": "CONTRIBUTING.html",
+        "slug": "contributing",
+        "headings": [
+          {
+            "title": "Table of contents",
+            "depth": 2,
+            "id": "table-of-contents"
+          },
+          {
+            "title": "Collaborative Etiquette",
+            "depth": 2,
+            "id": "collaborative-etiquette"
+          },
+          {
+            "title": "Submitting a Pull Request (PR)",
+            "depth": 2,
+            "id": "submitting-a-pull-request-(pr)",
+            "headings": [
+              {
+                "title": "After your pull request is merged",
+                "depth": 3,
+                "id": "after-your-pull-request-is-merged"
+              }
+            ]
+          },
+          {
+            "title": "Coding Style Guidelines",
+            "depth": 2,
+            "id": "coding-style-guidelines"
+          },
+          {
+            "title": "Commit Message Guidelines",
+            "depth": 2,
+            "id": "commit-message-guidelines",
+            "headings": [
+              {
+                "title": "Commit Message Format",
+                "depth": 3,
+                "id": "commit-message-format"
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -216,9 +273,24 @@
       "slug": "index",
       "headings": [
         {
+          "title": "Table of Contents",
+          "depth": 2,
+          "id": "table-of-contents"
+        },
+        {
+          "title": "Background",
+          "depth": 2,
+          "id": "background"
+        },
+        {
           "title": "Install",
           "depth": 2,
           "id": "install"
+        },
+        {
+          "title": "Usage",
+          "depth": 2,
+          "id": "usage"
         },
         {
           "title": "Custom registries",
@@ -236,19 +308,14 @@
           "id": "benchmark"
         },
         {
-          "title": "Design",
-          "depth": 2,
-          "id": "design"
-        },
-        {
           "title": "Prior art",
           "depth": 2,
           "id": "prior-art"
         },
         {
-          "title": "Thanks",
+          "title": "License",
           "depth": 2,
-          "id": "thanks"
+          "id": "license"
         }
       ]
     },
@@ -384,6 +451,52 @@
       "source": "docs/recipes/usage-in-monorepos.md",
       "title": "Usage in monorepos",
       "slug": "recipesusage-in-monorepos"
+    },
+    "CONTRIBUTING.html": {
+      "source": "CONTRIBUTING.md",
+      "title": "Contributing",
+      "slug": "contributing",
+      "headings": [
+        {
+          "title": "Table of contents",
+          "depth": 2,
+          "id": "table-of-contents"
+        },
+        {
+          "title": "Collaborative Etiquette",
+          "depth": 2,
+          "id": "collaborative-etiquette"
+        },
+        {
+          "title": "Submitting a Pull Request (PR)",
+          "depth": 2,
+          "id": "submitting-a-pull-request-(pr)",
+          "headings": [
+            {
+              "title": "After your pull request is merged",
+              "depth": 3,
+              "id": "after-your-pull-request-is-merged"
+            }
+          ]
+        },
+        {
+          "title": "Coding Style Guidelines",
+          "depth": 2,
+          "id": "coding-style-guidelines"
+        },
+        {
+          "title": "Commit Message Guidelines",
+          "depth": 2,
+          "id": "commit-message-guidelines",
+          "headings": [
+            {
+              "title": "Commit Message Format",
+              "depth": 3,
+              "id": "commit-message-format"
+            }
+          ]
+        }
+      ]
     }
   },
   "sources": {
@@ -398,6 +511,7 @@
     "docs/store-json.md": "store-json.html",
     "docs/recipes/shared-store.md": "recipes/shared-store.html",
     "docs/recipes/usage-in-monorepos.md": "recipes/usage-in-monorepos.html",
+    "CONTRIBUTING.md": "CONTRIBUTING.html",
     "docs/docpress.json": "docpress.json",
     "docs/images/screencast.gif": "images/screencast.gif"
   }

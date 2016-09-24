@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=2bcc4b59"></script>
+    <title>Contributing</title>
+    <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-contributing">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="contributing">Contributing</h1>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#collaborative-etiquette">Collaborative Etiquette</a></li>
+<li><a href="#submitting-a-pull-request-pr">Submitting a Pull Request (PR)</a>
+<ul>
+<li><a href="#after-your-pull-request-is-merged">After your pull request is merged</a></li>
+</ul>
+</li>
+<li><a href="#coding-style-guidelines">Coding Style Guidelines</a></li>
+<li><a href="#commit-message-guidelines">Commit Message Guidelines</a>
+<ul>
+<li><a href="#commit-message-format">Commit Message Format</a>
+<ul>
+<li><a href="#revert">Revert</a></li>
+<li><a href="#type">Type</a></li>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#subject">Subject</a></li>
+<li><a href="#body">Body</a></li>
+<li><a href="#footer">Footer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="collaborative-etiquette">Collaborative Etiquette</h2>
+<p><a href="https://git.io/col"><img src="https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg" alt=""></a></p>
+<p>This project follows <a href="http://git.io/col">collaborative etiquette</a> guidelines.</p>
+<h2 id="submitting-a-pull-request-(pr)">Submitting a Pull Request (PR)</h2>
+<p>Before you submit your Pull Request (PR) consider the following guidelines:</p>
+<ul>
+<li>
+<p>Search <a href="https://github.com/mosjs/mos/pulls">GitHub</a> for an open or closed PR
+that relates to your submission. You don&#x2019;t want to duplicate effort.</p>
+</li>
+<li>
+<p>Make your changes in a new git branch:</p>
+<pre><code class="lang-shell">git checkout -b my-fix-branch master
+</code></pre>
+</li>
+<li>
+<p>Create your patch, following <a href="#coding-style-guidelines">code style guidelines</a>, and <strong>including appropriate test cases</strong>.</p>
+</li>
+<li>
+<p>Run the full test suite and ensure that all tests pass.</p>
+</li>
+<li>
+<p>Commit your changes using a descriptive commit message that follows our
+<a href="#commit-message-guidelines">commit message conventions</a>. Adherence to these conventions
+is necessary because release notes are automatically generated from these messages.</p>
+<pre><code class="lang-shell">git commit -a
+</code></pre>
+<p>Note: the optional commit <code>-a</code> command line option will automatically &#x201C;add&#x201D; and &#x201C;rm&#x201D; edited files.</p>
+</li>
+<li>
+<p>Push your branch to GitHub:</p>
+<pre><code class="lang-shell">git push origin my-fix-branch
+</code></pre>
+</li>
+<li>
+<p>In GitHub, send a pull request to <code>rstacruz:master</code>.</p>
+</li>
+<li>
+<p>If we suggest changes then:</p>
+<ul>
+<li>
+<p>Make the required updates.</p>
+</li>
+<li>
+<p>Re-run the test suites to ensure tests are still passing.</p>
+</li>
+<li>
+<p>Rebase your branch and force push to your GitHub repository (this will update your Pull Request):</p>
+<pre><code class="lang-shell">git rebase master -i
+git push -f
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>That&#x2019;s it! Thank you for your contribution!</p>
+<h3 id="after-your-pull-request-is-merged">After your pull request is merged</h3>
+<p>After your pull request is merged, you can safely delete your branch and pull the changes
+from the main (upstream) repository:</p>
+<ul>
+<li>
+<p>Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:</p>
+<pre><code class="lang-shell">git push origin --delete my-fix-branch
+</code></pre>
+</li>
+<li>
+<p>Check out the master branch:</p>
+<pre><code class="lang-shell">git checkout master -f
+</code></pre>
+</li>
+<li>
+<p>Delete the local branch:</p>
+<pre><code class="lang-shell">git branch -D my-fix-branch
+</code></pre>
+</li>
+<li>
+<p>Update your master with the latest upstream version:</p>
+<pre><code class="lang-shell">git pull --ff upstream master
+</code></pre>
+</li>
+</ul>
+<h2 id="coding-style-guidelines">Coding Style Guidelines</h2>
+<p><a href="https://github.com/feross/standard"><img src="https://cdn.rawgit.com/feross/standard/master/badge.svg" alt="js-standard-style"></a></p>
+<p>Use the <a href="https://github.com/feross/standard">Standard Style</a>.</p>
+<h2 id="commit-message-guidelines">Commit Message Guidelines</h2>
+<p><a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a></p>
+<p>We have very precise rules over how our git commit messages can be formatted. This leads to <strong>more
+readable messages</strong> that are easy to follow when looking through the <strong>project history</strong>. Helper script <code>npm run commit</code>
+provides command line based wizard to format commit message easily.</p>
+<h3 id="commit-message-format">Commit Message Format</h3>
+<p>Each commit message consists of a <strong>header</strong>, a <strong>body</strong> and a <strong>footer</strong>.  The header has a special
+format that includes a <strong>type</strong>, a <strong>scope</strong> and a <strong>subject</strong>:</p>
+<pre><code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;
+&lt;BLANK LINE&gt;
+&lt;body&gt;
+&lt;BLANK LINE&gt;
+&lt;footer&gt;
+</code></pre>
+<p>The <strong>header</strong> is mandatory and the <strong>scope</strong> of the header is optional.</p>
+<p>Any line of the commit message cannot be longer 100 characters! This allows the message to be easier
+to read on GitHub as well as in various git tools.</p>
+<h4 id="revert">Revert</h4>
+<p>If the commit reverts a previous commit, it should begin with <code>revert:</code>, followed by the header of the reverted commit. In the body it should say: <code>This reverts commit &lt;hash&gt;.</code>, where the hash is the SHA of the commit being reverted.</p>
+<h4 id="type">Type</h4>
+<p>Must be one of the following:</p>
+<ul>
+<li><strong>feat</strong>: A new feature</li>
+<li><strong>fix</strong>: A bug fix</li>
+<li><strong>docs</strong>: Documentation only changes</li>
+<li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing
+semi-colons, etc)</li>
+<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature</li>
+<li><strong>perf</strong>: A code change that improves performance</li>
+<li><strong>test</strong>: Adding missing tests</li>
+<li><strong>chore</strong>: Changes to the build process or auxiliary tools and libraries such as documentation
+generation</li>
+</ul>
+<h4 id="scope">Scope</h4>
+<p>The scope could be anything specifying place of the commit change. For example
+<code>plugin-example</code>, <code>render-md</code>, etc.</p>
+<h4 id="subject">Subject</h4>
+<p>The subject contains succinct description of the change:</p>
+<ul>
+<li>use the imperative, present tense: &#x201C;change&#x201D; not &#x201C;changed&#x201D; nor &#x201C;changes&#x201D;</li>
+<li>don&#x2019;t capitalize first letter</li>
+<li>no dot (.) at the end</li>
+</ul>
+<h4 id="body">Body</h4>
+<p>Just as in the <strong>subject</strong>, use the imperative, present tense: &#x201C;change&#x201D; not &#x201C;changed&#x201D; nor &#x201C;changes&#x201D;.
+The body should include the motivation for the change and contrast this with previous behavior.</p>
+<h4 id="footer">Footer</h4>
+<p>The footer should contain any information about <strong>Breaking Changes</strong> and is also the place to
+reference GitHub issues that this commit <strong>Closes</strong>.</p>
+<p><strong>Breaking Changes</strong> should start with the word <code>BREAKING CHANGE:</code> with a space or two newlines. The rest of the commit message is then used for this.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="recipes/usage-in-monorepos.html"><span class="title">Usage in monorepos</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a href="index.html" class="link title  link-index">pnpm</a>
+            </li>
+            <li class="menu-item -level-1"><a href="api.html" class="link title  link-api">API</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Features</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="custom-registries.html" class="link title  link-custom-registries">Custom registries</a>
+                </li>
+                <li class="menu-item -level-2"><a href="store-layout.html" class="link title  link-store-layout">Store layout</a>
+                </li>
+                <li class="menu-item -level-2"><a href="global-install.html" class="link title  link-global-install">Global install</a>
+                </li>
+                <li class="menu-item -level-2"><a href="roadmap.html" class="link title  link-roadmap">Roadmap</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Comparison</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="vs-npm.html" class="link title  link-vs-npm">npm</a>
+                </li>
+                <li class="menu-item -level-2"><a href="vs-ied.html" class="link title  link-vs-ied">ied</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="store-json.html" class="link title  link-store-json">store.json</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Recipes</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="recipes/shared-store.html" class="link title  link-recipesshared-store">Shared store</a>
+                </li>
+                <li class="menu-item -level-2"><a href="recipes/usage-in-monorepos.html" class="link title  link-recipesusage-in-monorepos">Usage in monorepos</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1"><a href="CONTRIBUTING.html" class="link title -active link-contributing">Contributing</a>
+              <ul class="headings heading-list">
+                <li class="heading-item -depth-2"><a href="#table-of-contents" class="hlink link-table-of-contents">Table of contents</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#collaborative-etiquette" class="hlink link-collaborative-etiquette">Collaborative Etiquette</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#submitting-a-pull-request-(pr)" class="hlink link-submitting-a-pull-request-(pr)">Submitting a Pull Request (PR)</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#after-your-pull-request-is-merged" class="hlink link-after-your-pull-request-is-merged">After your pull request is merged</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="heading-item -depth-2"><a href="#coding-style-guidelines" class="hlink link-coding-style-guidelines">Coding Style Guidelines</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#commit-message-guidelines" class="hlink link-commit-message-guidelines">Commit Message Guidelines</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a href="#commit-message-format" class="hlink link-commit-message-format">Commit Message Format</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
