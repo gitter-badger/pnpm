@@ -43,16 +43,16 @@
 }
 </code></pre>
 <h2 id="dependencies">dependencies</h2>
-<p>A dictionary that is pretty match the opposite of <code>dependents</code>. The <code>store.json</code> from the previous example would contain the following <code>dependencies</code> property:</p>
+<p>A dictionary that is the opposite of <code>dependents</code>. However, it contains not just a list of dependency names but a map of the dependencies to their exact resolved ID.</p>
 <pre><code class="lang-json">{
   <span class="hljs-attr">&quot;dependencies&quot;</span>: {
-    <span class="hljs-attr">&quot;/home/john_smith/src/pnpm/package.json&quot;</span>: [
-      <span class="pl-s">&quot;semver@5.3.0&quot;</span>,
-      <span class="pl-s">&quot;npm@3.10.2&quot;</span>
-    ],
-    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: [
-      <span class="pl-s">&quot;semver@5.3.0&quot;</span>
-    ]
+    <span class="hljs-attr">&quot;/home/john_smith/src/pnpm/package.json&quot;</span>: {
+      <span class="hljs-attr">&quot;semver&quot;</span>: <span class="pl-s">&quot;semver@5.3.0&quot;</span>,
+      <span class="hljs-attr">&quot;npm&quot;</span>: <span class="pl-s">&quot;npm@3.10.2&quot;</span>
+    },
+    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: {
+      <span class="hljs-attr">&quot;semver&quot;</span>: <span class="pl-s">&quot;semver@5.3.0&quot;</span>
+    }
   }
 }
 </code></pre>
