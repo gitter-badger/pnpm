@@ -76,7 +76,23 @@ pnpm.install({
 </ul>
 <h2 id="pnpm.linkfromglobal(pkgname-options)"><code>pnpm.linkFromGlobal(pkgName, [options])</code></h2>
 <p>Create a symbolic link to the specified package from the global <code>node_modules</code> to the current working directory&#x2019;s <code>node_modules</code>.</p>
+<p><strong>Arguments:</strong></p>
 <ul>
+<li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
+</ul>
+<h2 id="pnpm.prune(options)"><code>pnpm.prune([options])</code></h2>
+<p>Remove extraneous packages. Extraneous packages are packages that are not listed on the parent package&#x2019;s dependencies list.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>options.production</code> - <em>Boolean</em> - by default <code>false</code>. If this property is <code>true</code>, prune will remove the packages specified in <code>devDependencies</code>.</li>
+<li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
+</ul>
+<h2 id="pnpm.prunepkgs(pkgs-options)"><code>pnpm.prunePkgs(pkgs, [options])</code></h2>
+<p>Remove extraneous packages specified in the <code>pkgs</code> arguments. Extraneous packages are packages that are not listed on the parent package&#x2019;s dependencies list.</p>
+<p><strong>Arguments:</strong></p>
+<ul>
+<li><code>pkgs</code> - <em>String[]</em> - prune only the specified packages.</li>
+<li><code>options.production</code> - <em>Boolean</em> - by default <code>false</code>. If this property is <code>true</code>, prune will remove the packages specified in <code>devDependencies</code>.</li>
 <li><code>options.cwd</code> - <em>String</em> - by default <code>process.cwd()</code>.</li>
 </ul>
 
@@ -104,6 +120,10 @@ pnpm.install({
                 <li class="heading-item -depth-2"><a href="#pnpm.linktoglobal(options)" class="hlink link-pnpm.linktoglobal(options)">`pnpm.linkToGlobal([options])`</a>
                 </li>
                 <li class="heading-item -depth-2"><a href="#pnpm.linkfromglobal(pkgname-options)" class="hlink link-pnpm.linkfromglobal(pkgname-options)">`pnpm.linkFromGlobal(pkgName, [options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.prune(options)" class="hlink link-pnpm.prune(options)">`pnpm.prune([options])`</a>
+                </li>
+                <li class="heading-item -depth-2"><a href="#pnpm.prunepkgs(pkgs-options)" class="hlink link-pnpm.prunepkgs(pkgs-options)">`pnpm.prunePkgs(pkgs, [options])`</a>
                 </li>
               </ul>
             </li>

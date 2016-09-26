@@ -89,6 +89,16 @@
             "title": "`pnpm.linkFromGlobal(pkgName, [options])`",
             "depth": 2,
             "id": "pnpm.linkfromglobal(pkgname-options)"
+          },
+          {
+            "title": "`pnpm.prune([options])`",
+            "depth": 2,
+            "id": "pnpm.prune(options)"
+          },
+          {
+            "title": "`pnpm.prunePkgs(pkgs, [options])`",
+            "depth": 2,
+            "id": "pnpm.prunepkgs(pkgs-options)"
           }
         ]
       },
@@ -353,6 +363,16 @@
           "title": "`pnpm.linkFromGlobal(pkgName, [options])`",
           "depth": 2,
           "id": "pnpm.linkfromglobal(pkgname-options)"
+        },
+        {
+          "title": "`pnpm.prune([options])`",
+          "depth": 2,
+          "id": "pnpm.prune(options)"
+        },
+        {
+          "title": "`pnpm.prunePkgs(pkgs, [options])`",
+          "depth": 2,
+          "id": "pnpm.prunepkgs(pkgs-options)"
         }
       ]
     },
