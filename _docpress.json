@@ -61,14 +61,14 @@
         "slug": "api",
         "headings": [
           {
-            "title": "`pnpm.install(pkgsToInstall, [options])`",
+            "title": "`pnpm.installPkgs(pkgsToInstall, [options])`",
             "depth": 2,
-            "id": "pnpm.install(pkgstoinstall-options)"
+            "id": "pnpm.installpkgs(pkgstoinstall-options)"
           },
           {
-            "title": "`pnpm.installPkgDeps([options])`",
+            "title": "`pnpm.install([options])`",
             "depth": 2,
-            "id": "pnpm.installpkgdeps(options)"
+            "id": "pnpm.install(options)"
           },
           {
             "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
@@ -335,14 +335,14 @@
       "slug": "api",
       "headings": [
         {
-          "title": "`pnpm.install(pkgsToInstall, [options])`",
+          "title": "`pnpm.installPkgs(pkgsToInstall, [options])`",
           "depth": 2,
-          "id": "pnpm.install(pkgstoinstall-options)"
+          "id": "pnpm.installpkgs(pkgstoinstall-options)"
         },
         {
-          "title": "`pnpm.installPkgDeps([options])`",
+          "title": "`pnpm.install([options])`",
           "depth": 2,
-          "id": "pnpm.installpkgdeps(options)"
+          "id": "pnpm.install(options)"
         },
         {
           "title": "`pnpm.uninstall(pkgsToUninstall, [options])`",
