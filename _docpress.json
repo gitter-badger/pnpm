@@ -197,14 +197,14 @@
                 "id": "pnpm"
               },
               {
-                "title": "dependents",
+                "title": "packages[packageId].dependents",
                 "depth": 2,
-                "id": "dependents"
+                "id": "packagespackageid.dependents"
               },
               {
-                "title": "dependencies",
+                "title": "packages[packageId].dependencies",
                 "depth": 2,
-                "id": "dependencies"
+                "id": "packagespackageid.dependencies"
               }
             ]
           }
@@ -451,14 +451,14 @@
           "id": "pnpm"
         },
         {
-          "title": "dependents",
+          "title": "packages[packageId].dependents",
           "depth": 2,
-          "id": "dependents"
+          "id": "packagespackageid.dependents"
         },
         {
-          "title": "dependencies",
+          "title": "packages[packageId].dependencies",
           "depth": 2,
-          "id": "dependencies"
+          "id": "packagespackageid.dependencies"
         }
       ]
     },
