@@ -280,6 +280,7 @@
     "index.html": {
       "source": "README.md",
       "title": "pnpm",
+      "pageTitle": "pnpm",
       "slug": "index",
       "headings": [
         {
@@ -331,7 +332,8 @@
     },
     "api.html": {
       "source": "docs/api.md",
-      "title": "API",
+      "title": "API - pnpm",
+      "pageTitle": "API",
       "slug": "api",
       "headings": [
         {
@@ -378,12 +380,14 @@
     },
     "custom-registries.html": {
       "source": "docs/custom-registries.md",
-      "title": "Custom registries",
+      "title": "Custom registries - pnpm",
+      "pageTitle": "Custom registries",
       "slug": "custom-registries"
     },
     "store-layout.html": {
       "source": "docs/store-layout.md",
-      "title": "Store layout",
+      "title": "Store layout - pnpm",
+      "pageTitle": "Store layout",
       "slug": "store-layout",
       "headings": [
         {
@@ -395,17 +399,20 @@
     },
     "global-install.html": {
       "source": "docs/global-install.md",
-      "title": "Global install",
+      "title": "Global install - pnpm",
+      "pageTitle": "Global install",
       "slug": "global-install"
     },
     "roadmap.html": {
       "source": "docs/roadmap.md",
-      "title": "Roadmap",
+      "title": "Roadmap - pnpm",
+      "pageTitle": "Roadmap",
       "slug": "roadmap"
     },
     "vs-npm.html": {
       "source": "docs/vs-npm.md",
-      "title": "npm",
+      "title": "npm - pnpm",
+      "pageTitle": "npm",
       "slug": "vs-npm",
       "headings": [
         {
@@ -437,12 +444,14 @@
     },
     "vs-ied.html": {
       "source": "docs/vs-ied.md",
-      "title": "ied",
+      "title": "ied - pnpm",
+      "pageTitle": "ied",
       "slug": "vs-ied"
     },
     "store-json.html": {
       "source": "docs/store-json.md",
-      "title": "store.json",
+      "title": "store.json - pnpm",
+      "pageTitle": "store.json",
       "slug": "store-json",
       "headings": [
         {
@@ -464,17 +473,20 @@
     },
     "recipes/shared-store.html": {
       "source": "docs/recipes/shared-store.md",
-      "title": "Shared store",
+      "title": "Shared store - pnpm",
+      "pageTitle": "Shared store",
       "slug": "recipesshared-store"
     },
     "recipes/usage-in-monorepos.html": {
       "source": "docs/recipes/usage-in-monorepos.md",
-      "title": "Usage in monorepos",
+      "title": "Usage in monorepos - pnpm",
+      "pageTitle": "Usage in monorepos",
       "slug": "recipesusage-in-monorepos"
     },
     "CONTRIBUTING.html": {
       "source": "CONTRIBUTING.md",
-      "title": "Contributing",
+      "title": "Contributing - pnpm",
+      "pageTitle": "Contributing",
       "slug": "contributing",
       "headings": [
         {
