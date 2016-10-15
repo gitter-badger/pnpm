@@ -99,6 +99,11 @@
             "title": "`pnpm.prunePkgs(pkgs, [options])`",
             "depth": 2,
             "id": "pnpm.prunepkgs(pkgs-options)"
+          },
+          {
+            "title": "`pnpm.cleanCache([globalPath])`",
+            "depth": 2,
+            "id": "pnpm.cleancache(globalpath)"
           }
         ]
       },
@@ -375,6 +380,11 @@
           "title": "`pnpm.prunePkgs(pkgs, [options])`",
           "depth": 2,
           "id": "pnpm.prunepkgs(pkgs-options)"
+        },
+        {
+          "title": "`pnpm.cleanCache([globalPath])`",
+          "depth": 2,
+          "id": "pnpm.cleancache(globalpath)"
         }
       ]
     },
