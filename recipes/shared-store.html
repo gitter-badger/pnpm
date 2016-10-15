@@ -69,12 +69,14 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="shared-store">Shared store</h1>
-<p><strong>Disclaimer!</strong> This will work only on Node.js &gt;= v6.3.0, because it uses the <code>--preserve-symlinks</code> option (read more about it: <a href="https://github.com/nodejs/node/issues/3402">nodejs/node#3402</a>).</p>
-<p>By default, <code>pnpm</code> creates a separate store for every package in it&#x2019;s <code>node_modules</code> folder. However, it is possible to change the value of the <code>store-path</code> config key and force <code>pnpm</code> to use a shared storage.</p>
+<p>A shared storage saves tons of space! However, a shared store is used by default only on Node.js &gt;= v6.3.0. The reason for that is because
+it uses the <code>--preserve-symlinks</code> option (read more about it: <a href="https://github.com/nodejs/node/issues/3402">nodejs/node#3402</a>).</p>
+<p>For pre 6.3.0 pnpm creates a separate store for every package in it&#x2019;s <code>node_modules</code> folder. However, it is possible to change the value of
+the <code>store-path</code> config key and force <code>pnpm</code> to use a shared storage.</p>
 <p>The easiest way to do it is via the command line:</p>
 <pre><code class="lang-sh">pnpm config <span class="pl-c1">set</span> store-path ~/.store
 </code></pre>
-<p>A shared storage can save tons of space!</p>
+<p><strong>Disclaimer!</strong> Packages like babel that heavily rely on peer dependencies won&#x2019;t work with a shared storage without the <code>--preserve-symlinks</code> flag.</p>
 
         </div>
         <div class="footer-nav">
