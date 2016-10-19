@@ -191,10 +191,10 @@
         "title": "Advanced",
         "sections": [
           {
-            "title": "store.json",
-            "source": "docs/store-json.md",
-            "url": "store-json.html",
-            "slug": "store-json",
+            "title": "store.yaml",
+            "source": "docs/store-yaml.md",
+            "url": "store-yaml.html",
+            "slug": "store-yaml",
             "headings": [
               {
                 "title": "pnpm",
@@ -458,11 +458,11 @@
       "pageTitle": "ied",
       "slug": "vs-ied"
     },
-    "store-json.html": {
-      "source": "docs/store-json.md",
-      "title": "store.json - pnpm",
-      "pageTitle": "store.json",
-      "slug": "store-json",
+    "store-yaml.html": {
+      "source": "docs/store-yaml.md",
+      "title": "store.yaml - pnpm",
+      "pageTitle": "store.yaml",
+      "slug": "store-yaml",
       "headings": [
         {
           "title": "pnpm",
@@ -550,7 +550,7 @@
     "docs/roadmap.md": "roadmap.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
-    "docs/store-json.md": "store-json.html",
+    "docs/store-yaml.md": "store-yaml.html",
     "docs/recipes/shared-store.md": "recipes/shared-store.html",
     "docs/recipes/usage-in-monorepos.md": "recipes/usage-in-monorepos.html",
     "CONTRIBUTING.md": "CONTRIBUTING.html",

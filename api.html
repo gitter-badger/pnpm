@@ -65,7 +65,7 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-store-json" href="store-json.html">store.json</a>
+                <li class="menu-item -level-2"><a class="link title  link-store-yaml" href="store-yaml.html">store.yaml</a>
                 </li>
               </ul>
             </li>
@@ -102,6 +102,7 @@
 <li><code>options.cwd</code> - <em>String</em> - the directory in which the installation will be performed. By default the <code>process.cwd()</code> value is used.</li>
 <li><code>options.quiet</code> - <em>Boolean</em> - <code>false</code> by default. No output to the console.</li>
 <li><code>options.cacheTTL</code> - <em>Number</em> - 1 day by default. The time (in seconds) during which HTTP requests are cached (except the ones that request tarballs).</li>
+<li><code>options.flatTree</code> - <em>Boolean</em> - <code>false</code> by default. Can be use only on Node.js &gt;= 6.3.0. Emulates a flat dependency tree similar to the one created by npm v3 (<a href="https://docs.npmjs.com/how-npm-works/npm3">npm v3 Dependency Resolution</a>).</li>
 </ul>
 <p><strong>Returns:</strong> a Promise</p>
 <p><strong>Example:</strong></p>

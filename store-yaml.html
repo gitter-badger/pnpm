@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="assets/style.css?t=d358ee59">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="assets/script.js?t=36f3d457"></script>
-    <title>store.json - pnpm</title>
+    <title>store.yaml - pnpm</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -45,7 +45,7 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">Advanced</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title -active link-store-json" href="store-json.html">store.json</a>
+                <li class="menu-item -level-2"><a class="link title -active link-store-yaml" href="store-yaml.html">store.yaml</a>
                   <ul class="headings heading-list">
                     <li class="heading-item -depth-2"><a class="hlink link-pnpm" href="#pnpm">pnpm</a>
                     </li>
@@ -70,52 +70,38 @@
           </ul>
         </li>
       </div>
-      <div class="body page-store-json">
+      <div class="body page-store-yaml">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="store.json">store.json</h1>
-<p><code>store.json</code> contains information about all the different internal/external dependencies that the packages in the store have. This is especially useful because <code>pnpm</code> allows to use shared stores.</p>
+        <div class="markdown-body"><h1 id="store.yaml">store.yaml</h1>
+<p><code>store.yaml</code> contains information about all the different internal/external dependencies that the packages in the store have. This is especially useful because <code>pnpm</code> allows to use shared stores.</p>
 <h2 id="pnpm">pnpm</h2>
 <p>The last compatible pnpm version that has modified the store.</p>
 <h2 id="packagespackageid.dependents">packages[packageId].dependents</h2>
 <p>A dictionary that shows what packages are dependent on each of the package from the store. The dependent packages can be other packages from the store, or packages that use the store to install their dependencies.</p>
-<p>For example, <code>pnpm</code> has a dependency on <code>npm</code> and <code>semver</code>. But <code>semver</code> is also a dependency of <code>npm</code>. It means that after installation, the <code>store.json</code> would have connections like this in the <code>dependents</code> property:</p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">&quot;packages&quot;</span>: {
-    <span class="hljs-attr">&quot;semver@5.3.0&quot;</span>: {
-      <span class="hljs-attr">&quot;dependents&quot;</span>: [
-        <span class="pl-s">&quot;/home/john_smith/src/pnpm&quot;</span>,
-        <span class="pl-s">&quot;npm@3.10.2&quot;</span>
-      ]
-    },
-    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: {
-      <span class="hljs-attr">&quot;dependents&quot;</span>: [
-        <span class="pl-s">&quot;/home/john_smith/src/pnpm&quot;</span>
-      ]
-    }
-  }
-}
+<p>For example, <code>pnpm</code> has a dependency on <code>npm</code> and <code>semver</code>. But <code>semver</code> is also a dependency of <code>npm</code>. It means that after installation, the <code>store.yaml</code> would have connections like this in the <code>dependents</code> property:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">packages:</span>
+  semver@<span class="hljs-number">5.3</span><span class="hljs-number">.0</span>: 
+<span class="hljs-attr">    dependents:</span>
+<span class="hljs-bullet">      -</span> /home/john_smith/src/pnpm
+<span class="hljs-bullet">      -</span> npm@<span class="hljs-number">3.10</span><span class="hljs-number">.2</span>
+  npm@<span class="hljs-number">3.10</span><span class="hljs-number">.2</span>:
+<span class="hljs-attr">    dependents:</span>
+<span class="hljs-bullet">      -</span> /home/john_smith/src/pnpm
 </code></pre>
 <h2 id="packagespackageid.dependencies">packages[packageId].dependencies</h2>
 <p>A dictionary that is the opposite of <code>dependents</code>. However, it contains not just a list of dependency names but a map of the dependencies to their exact resolved ID.</p>
-<pre><code class="lang-json">{
-  <span class="hljs-attr">&quot;packages&quot;</span>: {
-    <span class="hljs-attr">&quot;/home/john_smith/src/pnpm&quot;</span>: {
-      <span class="hljs-attr">&quot;dependencies&quot;</span>: {
-        <span class="hljs-attr">&quot;semver&quot;</span>: <span class="pl-s">&quot;semver@5.3.0&quot;</span>,
-        <span class="hljs-attr">&quot;npm&quot;</span>: <span class="pl-s">&quot;npm@3.10.2&quot;</span>
-      }
-    },
-    <span class="hljs-attr">&quot;npm@3.10.2&quot;</span>: {
-      <span class="hljs-attr">&quot;dependencies&quot;</span>: {
-        <span class="hljs-attr">&quot;semver&quot;</span>: <span class="pl-s">&quot;semver@5.3.0&quot;</span>
-      }
-    }
-  }
-}
+<pre><code class="lang-yaml"><span class="hljs-attr">packages:</span>
+  /home/john_smith/src/pnpm:
+<span class="hljs-attr">    dependencies:</span>
+<span class="hljs-attr">      semver:</span> semver@<span class="hljs-number">5.3</span><span class="hljs-number">.0</span>
+<span class="hljs-attr">      npm:</span> npm@<span class="hljs-number">3.10</span><span class="hljs-number">.2</span>
+  npm@<span class="hljs-number">3.10</span><span class="hljs-number">.2</span>:
+<span class="hljs-attr">    dependencies:</span>
+<span class="hljs-attr">      semver:</span> semver@<span class="hljs-number">5.3</span><span class="hljs-number">.0</span>
 </code></pre>
 
         </div>
