@@ -229,6 +229,24 @@
             "source": "docs/recipes/usage-in-monorepos.md",
             "url": "recipes/usage-in-monorepos.html",
             "slug": "recipesusage-in-monorepos"
+          },
+          {
+            "title": "Continues Integration",
+            "source": "docs/recipes/continues-integration.md",
+            "url": "recipes/continues-integration.html",
+            "slug": "recipescontinues-integration",
+            "headings": [
+              {
+                "title": "Travis",
+                "depth": 2,
+                "id": "travis"
+              },
+              {
+                "title": "AppVeyor",
+                "depth": 2,
+                "id": "appveyor"
+              }
+            ]
           }
         ]
       },
@@ -493,6 +511,24 @@
       "pageTitle": "Usage in monorepos",
       "slug": "recipesusage-in-monorepos"
     },
+    "recipes/continues-integration.html": {
+      "source": "docs/recipes/continues-integration.md",
+      "title": "Continues Integration - pnpm",
+      "pageTitle": "Continues Integration",
+      "slug": "recipescontinues-integration",
+      "headings": [
+        {
+          "title": "Travis",
+          "depth": 2,
+          "id": "travis"
+        },
+        {
+          "title": "AppVeyor",
+          "depth": 2,
+          "id": "appveyor"
+        }
+      ]
+    },
     "CONTRIBUTING.html": {
       "source": "CONTRIBUTING.md",
       "title": "Contributing - pnpm",
@@ -553,6 +589,7 @@
     "docs/store-yaml.md": "store-yaml.html",
     "docs/recipes/shared-store.md": "recipes/shared-store.html",
     "docs/recipes/usage-in-monorepos.md": "recipes/usage-in-monorepos.html",
+    "docs/recipes/continues-integration.md": "recipes/continues-integration.html",
     "CONTRIBUTING.md": "CONTRIBUTING.html",
     "docs/docpress.json": "docpress.json",
     "docs/images/screencast.gif": "images/screencast.gif"

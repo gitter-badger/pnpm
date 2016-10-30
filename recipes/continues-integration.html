@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="../assets/style.css?t=d358ee59">
     <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
     <script src="../assets/script.js?t=36f3d457"></script>
-    <title>Usage in monorepos - pnpm</title>
+    <title>Continues Integration - pnpm</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -53,9 +53,15 @@
               <ul class="submenu">
                 <li class="menu-item -level-2"><a class="link title  link-recipesshared-store" href="../recipes/shared-store.html">Shared store</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title -active link-recipesusage-in-monorepos" href="../recipes/usage-in-monorepos.html">Usage in monorepos</a>
+                <li class="menu-item -level-2"><a class="link title  link-recipesusage-in-monorepos" href="../recipes/usage-in-monorepos.html">Usage in monorepos</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-recipescontinues-integration" href="../recipes/continues-integration.html">Continues Integration</a>
+                <li class="menu-item -level-2"><a class="link title -active link-recipescontinues-integration" href="../recipes/continues-integration.html">Continues Integration</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-travis" href="#travis">Travis</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-appveyor" href="#appveyor">AppVeyor</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
@@ -64,36 +70,33 @@
           </ul>
         </li>
       </div>
-      <div class="body page-recipesusage-in-monorepos">
+      <div class="body page-recipescontinues-integration">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/rstacruz/pnpm" data-title="rstacruz/pnpm">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="usage-in-monorepos">Usage in monorepos</h1>
-<p><code>pnpm</code>&apos;s ability to use a <a href="shared-store.html">shared store</a> makes it a perfect choice
-for monorepo projects. But there are even more benefits you&#x2019;ll get!</p>
-<p>When you work in a monorepo, you need all your dependencies linked together via <code>npm link</code>.
-However, you also need them to be required by each other in their <code>package.json</code>.</p>
-<p>This is really inconvenient for a few reasons:</p>
-<ol>
-<li>having the dependencies required as semver dependencies, will download them from the registry
-during installation.</li>
-<li><code>npm link</code> prevents downloading from the registry. However, all the dependencies has to
-be manually linked between each other.</li>
-</ol>
-<p><code>pnpm</code> solves these issues with a special option called <code>link-local</code>. When the <code>link-local</code>
-config value is set to <code>true</code>, <code>pnpm</code> will do to changes in it&#x2019;s usual behavior:</p>
-<ol>
-<li>local dependencies will be resolved with symlinks instead of copy/pasting</li>
-<li>before publish, the local dependencies will be converted into semver dependencies</li>
-</ol>
-<p>Here is an <a href="https://github.com/rstacruz/pnpm/tree/master/examples/monorepo">example monorepo</a> to see how it works.</p>
+        <div class="markdown-body"><h1 id="continues-integration">Continues Integration</h1>
+<p>pnpm can easily be used in various continuous integration systems.</p>
+<h2 id="travis">Travis</h2>
+<p>On <a href="https://travis-ci.org/">Travis CI</a>, you can use pnpm for installing your dependencies by adding this to your <code>.travis.yml</code> file:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">before_install:</span>
+<span class="hljs-bullet">  -</span> npm install -g pnpm
+<span class="hljs-attr">install:</span>
+<span class="hljs-bullet">  -</span> pnpm install
+</code></pre>
+<h2 id="appveyor">AppVeyor</h2>
+<p>On <a href="https://www.appveyor.com/">AppVeyor</a>, you can use pnpm for installing your dependencies by adding this to your <code>appveyor.yml</code>:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">install:</span>
+<span class="hljs-attr">  - ps:</span> Install-Product node $env:nodejs_version
+<span class="hljs-bullet">  -</span> npm install -g pnpm
+<span class="hljs-bullet">  -</span> pnpm install
+</code></pre>
 
         </div>
         <div class="footer-nav">
-          <div class="left"><a href="../recipes/shared-store.html"><span class="title">Shared store</span></a></div>
-          <div class="right"><a href="../recipes/continues-integration.html"><span class="label">Next: </span><span class="title">Continues Integration</span></a></div>
+          <div class="left"><a href="../recipes/usage-in-monorepos.html"><span class="title">Usage in monorepos</span></a></div>
+          <div class="right"><a href="../CONTRIBUTING.html"><span class="label">Next: </span><span class="title">Contributing</span></a></div>
         </div>
       </div>
     </div>
