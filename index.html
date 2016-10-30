@@ -29,13 +29,11 @@
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-usage" href="#usage">Usage</a>
                 </li>
-                <li class="heading-item -depth-2"><a class="hlink link-custom-registries" href="#custom-registries">Custom registries</a>
-                </li>
-                <li class="heading-item -depth-2"><a class="hlink link-preview-release" href="#preview-release">Preview release</a>
-                </li>
                 <li class="heading-item -depth-2"><a class="hlink link-benchmark" href="#benchmark">Benchmark</a>
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-prior-art" href="#prior-art">Prior art</a>
+                </li>
+                <li class="heading-item -depth-2"><a class="hlink link-preview-release" href="#preview-release">Preview release</a>
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-license" href="#license">License</a>
                 </li>
@@ -104,11 +102,13 @@
 <li><a href="#background">Background</a></li>
 <li><a href="#install">Install</a></li>
 <li><a href="#usage">Usage</a></li>
-<li><a href="#custom-registries">Custom registries</a></li>
-<li><a href="#preview-release">Preview release</a></li>
 <li><a href="#benchmark">Benchmark</a></li>
-<li><a href="#prior-art">Prior art</a></li>
-<li><a href="#license">License</a></li>
+<li>Recipes
+<ul>
+<li><a href="recipes/usage-in-monorepos.html">Usage in monorepos</a></li>
+<li><a href="recipes/continuous-integration.html">Continuous Integration</a></li>
+</ul>
+</li>
 </ul>
 <h2 id="background">Background</h2>
 <p><code>pnpm</code> maintains a flat storage of all your dependencies in <code>node_modules/.store</code>. They are then symlinked wherever they&#x2019;re needed.
@@ -129,14 +129,15 @@ See <a href="store-layout.html">store layout</a> for an explanation.</p>
 <p>Install it via npm.</p>
 <pre><code>npm install -g pnpm
 </code></pre>
+<blockquote>
+<p>Do you wanna use pnpm on CI servers? See: <a href="recipes/continuous-integration.html">Continuous Integration</a>.</p>
+</blockquote>
 <h2 id="usage">Usage</h2>
 <p>Use <code>pnpm</code> in place of <code>npm</code>. It overrides <code>pnpm i</code>, <code>pnpm install</code> and some other command, the rest will passthru to <code>npm</code>.</p>
 <pre><code>pnpm install lodash
 </code></pre>
-<h2 id="custom-registries">Custom registries</h2>
-<p>pnpm uses whatever npm&#x2019;s configured to use as its registry. See: <a href="custom-registries.html">custom registries</a>.</p>
-<h2 id="preview-release">Preview release</h2>
-<p><code>pnpm</code> will stay in <code>&lt;1.0.0</code> until it&#x2019;s achieved feature parity with <code>npm install</code>. See <a href="https://github.com/rstacruz/pnpm/milestone/1">roadmap</a> for details.</p>
+<p>For using globally installed packages, see: <a href="global-install.html">global install</a>.</p>
+<p>For using the programmatic API, see: <a href="api.html">API</a>.</p>
 <h2 id="benchmark">Benchmark</h2>
 <pre><code>time npm i babel-preset-es2015 browserify chalk debug minimist mkdirp
     66.15 real        15.60 user         3.54 sys
@@ -149,6 +150,8 @@ See <a href="store-layout.html">store layout</a> for an explanation.</p>
 <li><a href="vs-ied.html">Compared to ied</a></li>
 <li><a href="vs-npm.html">Compared to npm</a></li>
 </ul>
+<h2 id="preview-release">Preview release</h2>
+<p><code>pnpm</code> will stay in <code>&lt;1.0.0</code> until it&#x2019;s achieved feature parity with <code>npm install</code>. See <a href="https://github.com/rstacruz/pnpm/milestone/1">roadmap</a> for details.</p>
 <h2 id="license">License</h2>
 <p><a href="https://github.com/rstacruz/pnpm/blob/master/LICENSE">MIT</a> &#xA9; <a href="http://ricostacruz.com">Rico Sta. Cruz</a> and <a href="http://github.com/rstacruz/pnpm/contributors">contributors</a></p>
 

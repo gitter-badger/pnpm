@@ -28,16 +28,6 @@
             "id": "usage"
           },
           {
-            "title": "Custom registries",
-            "depth": 2,
-            "id": "custom-registries"
-          },
-          {
-            "title": "Preview release",
-            "depth": 2,
-            "id": "preview-release"
-          },
-          {
             "title": "Benchmark",
             "depth": 2,
             "id": "benchmark"
@@ -46,6 +36,11 @@
             "title": "Prior art",
             "depth": 2,
             "id": "prior-art"
+          },
+          {
+            "title": "Preview release",
+            "depth": 2,
+            "id": "preview-release"
           },
           {
             "title": "License",
@@ -321,16 +316,6 @@
           "id": "usage"
         },
         {
-          "title": "Custom registries",
-          "depth": 2,
-          "id": "custom-registries"
-        },
-        {
-          "title": "Preview release",
-          "depth": 2,
-          "id": "preview-release"
-        },
-        {
           "title": "Benchmark",
           "depth": 2,
           "id": "benchmark"
@@ -339,6 +324,11 @@
           "title": "Prior art",
           "depth": 2,
           "id": "prior-art"
+        },
+        {
+          "title": "Preview release",
+          "depth": 2,
+          "id": "preview-release"
         },
         {
           "title": "License",
