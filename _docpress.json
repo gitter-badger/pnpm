@@ -225,10 +225,10 @@
             "slug": "recipesusage-in-monorepos"
           },
           {
-            "title": "Continues Integration",
-            "source": "docs/recipes/continues-integration.md",
-            "url": "recipes/continues-integration.html",
-            "slug": "recipescontinues-integration",
+            "title": "Continuous Integration",
+            "source": "docs/recipes/continuous-integration.md",
+            "url": "recipes/continuous-integration.html",
+            "slug": "recipescontinuous-integration",
             "headings": [
               {
                 "title": "Travis",
@@ -499,11 +499,11 @@
       "pageTitle": "Usage in monorepos",
       "slug": "recipesusage-in-monorepos"
     },
-    "recipes/continues-integration.html": {
-      "source": "docs/recipes/continues-integration.md",
-      "title": "Continues Integration - pnpm",
-      "pageTitle": "Continues Integration",
-      "slug": "recipescontinues-integration",
+    "recipes/continuous-integration.html": {
+      "source": "docs/recipes/continuous-integration.md",
+      "title": "Continuous Integration - pnpm",
+      "pageTitle": "Continuous Integration",
+      "slug": "recipescontinuous-integration",
       "headings": [
         {
           "title": "Travis",
@@ -576,7 +576,7 @@
     "docs/store-yaml.md": "store-yaml.html",
     "docs/recipes/shared-store.md": "recipes/shared-store.html",
     "docs/recipes/usage-in-monorepos.md": "recipes/usage-in-monorepos.html",
-    "docs/recipes/continues-integration.md": "recipes/continues-integration.html",
+    "docs/recipes/continuous-integration.md": "recipes/continuous-integration.html",
     "CONTRIBUTING.md": "CONTRIBUTING.html",
     "docs/docpress.json": "docpress.json",
     "docs/images/screencast.gif": "images/screencast.gif"
