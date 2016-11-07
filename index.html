@@ -28,6 +28,10 @@
                 <li class="heading-item -depth-2"><a class="hlink link-install" href="#install">Install</a>
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-usage" href="#usage">Usage</a>
+                  <ul class="heading-list -depth-2">
+                    <li class="heading-item -depth-3"><a class="hlink link-known-issues" href="#known-issues">Known issues</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="heading-item -depth-2"><a class="hlink link-benchmark" href="#benchmark">Benchmark</a>
                 </li>
@@ -138,6 +142,19 @@ See <a href="store-layout.html">store layout</a> for an explanation.</p>
 </code></pre>
 <p>For using globally installed packages, see: <a href="global-install.html">global install</a>.</p>
 <p>For using the programmatic API, see: <a href="api.html">API</a>.</p>
+<h3 id="known-issues">Known issues</h3>
+<p>Some packages are trying to find and use other packages in <code>node_modules</code>.
+However, when installed via pnpm, all the dependencies in <code>node_modules</code> are
+just symlinks. Node&#x2019;s require ignores symlinks when resolving modules and this
+causes a lot of issues. Luckily, starting from v6.3.0, Node.js has a CLI option to
+preserve symlinks when resolving modules (<a href="https://nodejs.org/api/cli.html#cli_preserve_symlinks">&#x2013;preserve-symlinks</a>).</p>
+<p>Things to remember:</p>
+<ul>
+<li>pnpm is best used on Node.js &gt;= 6.3.0</li>
+<li>it is recommended to run Node with the <code>--preserve-symlinks</code> option. E.g. <code>node --preserve-symlinks index</code>. Note: it is important that --preserve-symlinks is at the beginning of the command, otherwise it is ignored.</li>
+<li>CLI apps installed with pnpm are configured to correctly work with symlinked dependency trees. If a global package is used to work with a pnpm package, the global package
+should be installed via pnpm.</li>
+</ul>
 <h2 id="benchmark">Benchmark</h2>
 <pre><code>time npm i babel-preset-es2015 browserify chalk debug minimist mkdirp
     66.15 real        15.60 user         3.54 sys
