@@ -105,7 +105,11 @@
 <ul>
 <li><a href="#background">Background</a></li>
 <li><a href="#install">Install</a></li>
-<li><a href="#usage">Usage</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#known-issues">Known issues</a></li>
+</ul>
+</li>
 <li><a href="#benchmark">Benchmark</a></li>
 <li>Recipes
 <ul>
@@ -151,7 +155,7 @@ preserve symlinks when resolving modules (<a href="https://nodejs.org/api/cli.ht
 <p>Things to remember:</p>
 <ul>
 <li>pnpm is best used on Node.js &gt;= 6.3.0</li>
-<li>it is recommended to run Node with the <code>--preserve-symlinks</code> option. E.g. <code>node --preserve-symlinks index</code>. Note: it is important that --preserve-symlinks is at the beginning of the command, otherwise it is ignored.</li>
+<li>it is recommended to run Node with the <code>--preserve-symlinks</code> option. E.g. <code>node --preserve-symlinks index</code>. Note: it is important that <code>--preserve-symlinks</code> is at the beginning of the command, otherwise it is ignored.</li>
 <li>CLI apps installed with pnpm are configured to correctly work with symlinked dependency trees. If a global package is used to work with a pnpm package, the global package
 should be installed via pnpm.</li>
 </ul>
