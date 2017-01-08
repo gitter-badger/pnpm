@@ -125,6 +125,11 @@
             "slug": "store-layout",
             "headings": [
               {
+                "title": "This documentation is currently out of date!",
+                "depth": 2,
+                "id": "this-documentation-is-currently-out-of-date!"
+              },
+              {
                 "title": "Peer dependencies",
                 "depth": 2,
                 "id": "peer-dependencies"
@@ -192,6 +197,11 @@
             "url": "store-yaml.html",
             "slug": "store-yaml",
             "headings": [
+              {
+                "title": "This documentation is currently out of date!",
+                "depth": 2,
+                "id": "this-documentation-is-currently-out-of-date!"
+              },
               {
                 "title": "pnpm",
                 "depth": 2,
@@ -417,6 +427,11 @@
       "slug": "store-layout",
       "headings": [
         {
+          "title": "This documentation is currently out of date!",
+          "depth": 2,
+          "id": "this-documentation-is-currently-out-of-date!"
+        },
+        {
           "title": "Peer dependencies",
           "depth": 2,
           "id": "peer-dependencies"
@@ -474,6 +489,11 @@
       "pageTitle": "store.yaml",
       "slug": "store-yaml",
       "headings": [
+        {
+          "title": "This documentation is currently out of date!",
+          "depth": 2,
+          "id": "this-documentation-is-currently-out-of-date!"
+        },
         {
           "title": "pnpm",
           "depth": 2,
