@@ -25,14 +25,7 @@
           {
             "title": "Usage",
             "depth": 2,
-            "id": "usage",
-            "headings": [
-              {
-                "title": "Known issues",
-                "depth": 3,
-                "id": "known-issues"
-              }
-            ]
+            "id": "usage"
           },
           {
             "title": "Benchmark",
@@ -330,14 +323,7 @@
         {
           "title": "Usage",
           "depth": 2,
-          "id": "usage",
-          "headings": [
-            {
-              "title": "Known issues",
-              "depth": 3,
-              "id": "known-issues"
-            }
-          ]
+          "id": "usage"
         },
         {
           "title": "Benchmark",
