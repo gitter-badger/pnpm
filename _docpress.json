@@ -212,12 +212,6 @@
         "title": "Recipes",
         "sections": [
           {
-            "title": "Shared store",
-            "source": "docs/recipes/shared-store.md",
-            "url": "recipes/shared-store.html",
-            "slug": "recipesshared-store"
-          },
-          {
             "title": "Usage in monorepos",
             "source": "docs/recipes/usage-in-monorepos.md",
             "url": "recipes/usage-in-monorepos.html",
@@ -485,12 +479,6 @@
         }
       ]
     },
-    "recipes/shared-store.html": {
-      "source": "docs/recipes/shared-store.md",
-      "title": "Shared store - pnpm",
-      "pageTitle": "Shared store",
-      "slug": "recipesshared-store"
-    },
     "recipes/usage-in-monorepos.html": {
       "source": "docs/recipes/usage-in-monorepos.md",
       "title": "Usage in monorepos - pnpm",
@@ -571,7 +559,6 @@
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
     "docs/store-yaml.md": "store-yaml.html",
-    "docs/recipes/shared-store.md": "recipes/shared-store.html",
     "docs/recipes/usage-in-monorepos.md": "recipes/usage-in-monorepos.html",
     "docs/recipes/continuous-integration.md": "recipes/continuous-integration.html",
     "CONTRIBUTING.md": "CONTRIBUTING.html",
