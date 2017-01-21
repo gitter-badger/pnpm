@@ -128,12 +128,6 @@
                 "id": "peer-dependencies"
               }
             ]
-          },
-          {
-            "title": "Global install",
-            "source": "docs/global-install.md",
-            "url": "global-install.html",
-            "slug": "global-install"
           }
         ]
       },
@@ -424,12 +418,6 @@
         }
       ]
     },
-    "global-install.html": {
-      "source": "docs/global-install.md",
-      "title": "Global install - pnpm",
-      "pageTitle": "Global install",
-      "slug": "global-install"
-    },
     "vs-npm.html": {
       "source": "docs/vs-npm.md",
       "title": "npm - pnpm",
@@ -580,7 +568,6 @@
     "docs/api.md": "api.html",
     "docs/custom-registries.md": "custom-registries.html",
     "docs/store-layout.md": "store-layout.html",
-    "docs/global-install.md": "global-install.html",
     "docs/vs-npm.md": "vs-npm.html",
     "docs/vs-ied.md": "vs-ied.html",
     "docs/store-yaml.md": "store-yaml.html",
